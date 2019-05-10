@@ -1,6 +1,6 @@
 # CodeConnector
 
-Code connector is a MERN stack application that will connect developers and display repositories and skills.
+Code connector is a Mongo Express React Node stack application that will connect developers and display repositories and skills.
 
 # Go to CodeConnector
 https://finalproject-codeconnect.herokuapp.com/
