@@ -1,7 +1,7 @@
 {
-  "name": "finalproject",
+  "name": "final-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Social network for developers",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -10,30 +10,20 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rickiangela/FinalProject.git"
-  },
   "author": "Ricki Echevarria",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rickiangela/FinalProject/issues"
-  },
-  "homepage": "https://github.com/rickiangela/FinalProject#readme",
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.19.0"
-  },
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.1.0",
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
     "gravatar": "^1.8.0",
-    "jquery": "^3.4.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.5.7",
-    "path": "^0.12.7",
+    "mongoose": "^5.5.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.11"
   }
 }

@@ -1,16 +1,16 @@
-import React, { Fragment, useState } from "react";
-import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
-import { setAlert } from "../../actions/alert";
-import { register } from "../../actions/auth";
-import PropTypes from "prop-types";
+import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
+import { setAlert } from '../../actions/alert';
+import { register } from '../../actions/auth';
+import PropTypes from 'prop-types';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    password2: ""
+    name: '',
+    email: '',
+    password: '',
+    password2: ''
   });
 
   const { name, email, password, password2 } = formData;
@@ -21,69 +21,66 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      setAlert("Passwords do not match", "danger");
+      setAlert('Passwords do not match', 'danger');
     } else {
       register({ name, email, password });
     }
   };
 
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to='/dashboard' />;
   }
 
   return (
-    <Fragment>
-      <h1 className="large text-primary">Sign Up</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Create Your Account
-      </p>
-      <form className="form" onSubmit={e => onSubmit(e)}>
-        <div className="form-group">
+    <div style={{ width: "50%", margin: "auto", borderStyle: "solid", padding: "70px", borderWidth: ".2px;", borderRadius: "10px", marginTop: "30px", backgroundColor: "white" }}>
+      <h1 className='large text-primary'>Sign Up</h1>
+      <form className='form' onSubmit={e => onSubmit(e)}>
+        <div className='form-group'>
           <input
-            type="text"
-            placeholder="Name"
-            name="name"
+            type='text'
+            placeholder='Name'
+            style={{ borderRadius: "5px" }}
+            name='name'
             value={name}
             onChange={e => onChange(e)}
           />
         </div>
-        <div className="form-group">
+        <div className='form-group'>
           <input
-            type="email"
-            placeholder="Email Address"
-            name="email"
+            type='email'
+            placeholder='Email Address'
+            style={{ borderRadius: "5px" }}
+            name='email'
             value={email}
             onChange={e => onChange(e)}
           />
-          <small className="form-text">
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small>
         </div>
-        <div className="form-group">
+        <div className='form-group'>
           <input
-            type="password"
-            placeholder="Password"
-            name="password"
+            type='password'
+            placeholder='Password'
+            style={{ borderRadius: "5px" }}
+            name='password'
             value={password}
             onChange={e => onChange(e)}
           />
         </div>
-        <div className="form-group">
+        <div className='form-group'>
           <input
-            type="password"
-            placeholder="Confirm Password"
-            name="password2"
+            type='password'
+            style={{ borderRadius: "5px" }}
+            placeholder='Confirm Password'
+            name='password2'
             value={password2}
             onChange={e => onChange(e)}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input type='submit' style={{ borderRadius: "5px" }} className='btn btn-primary' value='Register' />
       </form>
-      <p className="my-1">
-        Already have an account? <Link to="/login">Sign In</Link>
+      <p className='my-1'>
+        Already have an account? <Link to='/login'>Sign In</Link>
       </p>
-    </Fragment>
+    </div>
   );
 };
 

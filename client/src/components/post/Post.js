@@ -16,18 +16,18 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   return loading || post === null ? (
     <Spinner />
   ) : (
-    <Fragment>
+    <div style={{ borderRadius: "5px" }}>
       <Link to='/posts' className='btn'>
         Back To Posts
       </Link>
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
-      <div className='comments'>
+      <div className='comments' style={{ borderRadius: "5px" }}>
         {post.comments.map(comment => (
           <CommentItem key={comment._id} comment={comment} postId={post._id} />
         ))}
       </div>
-    </Fragment>
+    </div>
   );
 };
 

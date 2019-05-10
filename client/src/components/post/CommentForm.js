@@ -7,12 +7,13 @@ const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState('');
 
   return (
-    <div class='post-form'>
-      <div class='bg-primary p'>
-        <h3>Leave a Comment</h3>
+    <div class='post-form' style={{ borderRadius: "5px" }}>
+      <div style={{ borderRadius: "5px" }} class='bg-primary p'>
+        <h3 style={{ borderRadius: "5px" }}>Comment</h3>
       </div>
       <form
         class='form my-1'
+        style={{ borderRadius: "5px" }}
         onSubmit={e => {
           e.preventDefault();
           addComment(postId, { text });
@@ -23,7 +24,8 @@ const CommentForm = ({ postId, addComment }) => {
           name='text'
           cols='30'
           rows='5'
-          placeholder='Create a post'
+          placeholder='Say something...'
+          style={{ borderRadius: "5px" }}
           value={text}
           onChange={e => setText(e.target.value)}
           required

@@ -25,16 +25,14 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
+    <div style={{ width: "50%", margin: "auto", borderStyle: "solid", padding: "70px", borderWidth: ".2px;", borderRadius: "10px", marginTop: "30px", backgroundColor: "white" }}>
       <h1 className='large text-primary'>Sign In</h1>
-      <p className='lead'>
-        <i className='fas fa-user' /> Sign Into Your Account
-      </p>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <input
             type='email'
             placeholder='Email Address'
+            style={{ borderRadius: "5px" }}
             name='email'
             value={email}
             onChange={e => onChange(e)}
@@ -45,27 +43,31 @@ const Login = ({ login, isAuthenticated }) => {
           <input
             type='password'
             placeholder='Password'
+            style={{ borderRadius: "5px" }}
             name='password'
             value={password}
             onChange={e => onChange(e)}
             minLength='6'
           />
         </div>
-        <input type='submit' className='btn btn-primary' value='Login' />
+        <input type='submit' style={{ borderRadius: "5px" }} className='btn btn-primary' value='Login' />
       </form>
       <p className='my-1'>
         Don't have an account? <Link to='/register'>Sign Up</Link>
       </p>
-    </Fragment>
+    </div>
   );
 };
+
 Login.propTypes = {
   login: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
 };
+
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
+
 export default connect(
   mapStateToProps,
   { login }

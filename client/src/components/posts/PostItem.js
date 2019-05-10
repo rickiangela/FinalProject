@@ -13,14 +13,14 @@ const PostItem = ({
   post: { _id, text, name, avatar, user, likes, comments, date },
   showActions
 }) => (
-  <div class='post bg-white p-1 my-1'>
+  <div class='post bg-white p-1 my-1' style={{ borderRadius: "5px" }}>
     <div>
       <Link to={`/profile/${user}`}>
         <img class='round-img' src={avatar} alt='' />
         <h4>{name}</h4>
       </Link>
     </div>
-    <div>
+    <div style={{ borderRadius: "5px" }}>
       <p class='my-1'>{text}</p>
       <p class='post-date'>
         Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>

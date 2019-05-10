@@ -14,18 +14,18 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
   return loading ? (
     <Spinner />
   ) : (
-    <Fragment>
+    <div style={{ borderRadius: "5px" }}>
       <h1 className='large text-primary'>Posts</h1>
       <p className='lead'>
         <i className='fas fa-user' /> Welcome to the community
       </p>
       <PostForm />
-      <div className='posts'>
+      <div className='posts' style={{ borderRadius: "5px" }}>
         {posts.map(post => (
           <PostItem key={post._id} post={post} />
         ))}
       </div>
-    </Fragment>
+    </div>
   );
 };
 

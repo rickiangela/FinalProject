@@ -86,8 +86,8 @@ const EditProfile = ({
             <option value='Junior Developer'>Junior Developer</option>
             <option value='Senior Developer'>Senior Developer</option>
             <option value='Manager'>Manager</option>
-            <option value='Student or Learning'>Student or Learning</option>
-            <option value='Instructor'>Instructor or Teacher</option>
+            <option value='Student'>Student or Learning</option>
+            <option value='Teacher'>Instructor or Teacher</option>
             <option value='Intern'>Intern</option>
             <option value='Other'>Other</option>
           </select>
@@ -158,13 +158,14 @@ const EditProfile = ({
         </div>
         <div className='form-group'>
           <textarea
-            placeholder='A short bio of yourself'
+            placeholder='Say something ...'
             name='bio'
             value={bio}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>Tell us a little about yourself</small>
         </div>
+
         <div className='my-2'>
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
@@ -175,6 +176,7 @@ const EditProfile = ({
           </button>
           <span>Optional</span>
         </div>
+
         {displaySocialInputs && (
           <Fragment>
             <div className='form-group social-input'>
@@ -187,6 +189,7 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-facebook fa-2x' />
               <input
@@ -197,6 +200,7 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-youtube fa-2x' />
               <input
@@ -207,6 +211,7 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-linkedin fa-2x' />
               <input
@@ -217,6 +222,7 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-instagram fa-2x' />
               <input
@@ -229,6 +235,7 @@ const EditProfile = ({
             </div>
           </Fragment>
         )}
+
         <input type='submit' className='btn btn-primary my-1' />
         <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
@@ -237,14 +244,17 @@ const EditProfile = ({
     </Fragment>
   );
 };
+
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 };
+
 const mapStateToProps = state => ({
   profile: state.profile
 });
+
 export default connect(
   mapStateToProps,
   { createProfile, getCurrentProfile }

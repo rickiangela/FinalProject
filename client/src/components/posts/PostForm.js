@@ -7,10 +7,7 @@ const PostForm = ({ addPost }) => {
   const [text, setText] = useState('');
 
   return (
-    <div class='post-form'>
-      <div class='bg-primary p'>
-        <h3>Say Something...</h3>
-      </div>
+    <div class='post-form' style={{ borderRadius: "5px" }}>
       <form
         class='form my-1'
         onSubmit={e => {
@@ -23,12 +20,13 @@ const PostForm = ({ addPost }) => {
           name='text'
           cols='30'
           rows='5'
-          placeholder='Create a post'
+          style={{ borderRadius: "5px" }}
+          placeholder='Say something...'
           value={text}
           onChange={e => setText(e.target.value)}
           required
         />
-        <input type='submit' class='btn btn-dark my-1' value='Submit' />
+        <input type='submit' style={{ borderRadius: "5px" }} class='btn btn-dark my-1' value='Submit' />
       </form>
     </div>
   );

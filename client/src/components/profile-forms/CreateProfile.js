@@ -140,6 +140,7 @@ const CreateProfile = ({ createProfile, history }) => {
           />
           <small className='form-text'>Tell us a little about yourself</small>
         </div>
+
         <div className='my-2'>
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
@@ -150,6 +151,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </button>
           <span>Optional</span>
         </div>
+
         {displaySocialInputs && (
           <Fragment>
             <div className='form-group social-input'>
@@ -162,6 +164,7 @@ const CreateProfile = ({ createProfile, history }) => {
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-facebook fa-2x' />
               <input
@@ -172,6 +175,7 @@ const CreateProfile = ({ createProfile, history }) => {
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-youtube fa-2x' />
               <input
@@ -182,6 +186,7 @@ const CreateProfile = ({ createProfile, history }) => {
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-linkedin fa-2x' />
               <input
@@ -192,6 +197,7 @@ const CreateProfile = ({ createProfile, history }) => {
                 onChange={e => onChange(e)}
               />
             </div>
+
             <div className='form-group social-input'>
               <i className='fab fa-instagram fa-2x' />
               <input
@@ -204,6 +210,7 @@ const CreateProfile = ({ createProfile, history }) => {
             </div>
           </Fragment>
         )}
+
         <input type='submit' className='btn btn-primary my-1' />
         <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
@@ -212,9 +219,11 @@ const CreateProfile = ({ createProfile, history }) => {
     </Fragment>
   );
 };
+
 CreateProfile.propTypes = {
   createProfile: PropTypes.func.isRequired
 };
+
 export default connect(
   null,
   { createProfile }
