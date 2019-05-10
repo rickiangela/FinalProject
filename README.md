@@ -26,5 +26,5 @@ npm run dev
 * [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
 * [Express](https://www.npmjs.com/package/express)
 * [Jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
-* [Mongoose](https://www.npmjs.com/package/mongoose)
+* [Github](https://developer.github.com/v3/)
 * [Redux](https://www.npmjs.com/package/redux)
