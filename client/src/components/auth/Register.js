@@ -32,7 +32,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <div style={{ width: "50%", margin: "auto", borderStyle: "solid", padding: "70px", borderWidth: ".2px;", borderRadius: "10px", marginTop: "30px", backgroundColor: "white" }}>
+    <div className="reg">
       <h1 className='large text-primary'>Sign Up</h1>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>

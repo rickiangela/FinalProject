@@ -74,6 +74,17 @@ img {
   color: var(--dark-color);
 }
 
+.reg { 
+  width: 50%;
+  margin: auto;
+  border-style: solid;
+  padding: 70px;
+  border-width: .2px;
+  border-radius: 10px; 
+  margin-top: 30px;
+  background-color: white; 
+}
+
 /* Padding */
 .p {
   padding: 0.5rem;
@@ -505,7 +516,6 @@ button {
   .x-large {
     font-size: 3rem;
   }
-
   .large {
     font-size: 2rem;
   }
@@ -576,5 +586,9 @@ button {
   .post a,
   .post button {
     padding: 0.3rem 0.4rem;
+  }
+
+  .reg {
+    width: 100%;
   }
 }
